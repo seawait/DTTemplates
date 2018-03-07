@@ -1,0 +1,10 @@
+Insert
+//===ACMD===
+src/public/event/GameEvent.ts
+//===ACMD===
+    //ACMD insert1
+//===ACMD===
+    //{__Comment__}
+    public static {__EventName__.u}:string="{__EventName__.u}";
+//===ACMD===
+//===ACMD===
