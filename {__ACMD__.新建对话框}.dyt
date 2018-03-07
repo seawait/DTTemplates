@@ -24,7 +24,7 @@ export class {__DialogName__.p}Dlg{
 export {{__DialogName__.p}Dlg as indexDialog};
 //===ACMD===
 Add
-//===ACMD==
+//===ACMD===
 src/dialog/{__DialogFolderName__.c}/{__DialogName__.p}DlgMediator.ts
 //===ACMD===
 import { Mediator, MHandler, MEvent } from '../../public/lib/RbLeg';
@@ -64,6 +64,7 @@ src/public/event/GameEvent.ts
 //===ACMD===
     //{__Comment__}
     public static SHOW_{__DialogName__.u}_DLG:string="SHOW_{__DialogName__.u}_DLG";
+
 //===ACMD===
 //===ACMD===
 Insert
@@ -73,6 +74,7 @@ src/public/config/DialogConfig.ts
         //ACMD insert
 //===ACMD===
         this._map[ GameEvent.SHOW_{__DialogName__.u}_DLG ] = new DialogVo( "dialog/{__DialogFolderName__.c}/{__DialogName__.p}Dlg", ["{__DialogName__.p}Dlg"]);
+
 //===ACMD===
 //===ACMD===
 Insert
@@ -83,6 +85,7 @@ src/public/config/AssetConfig.ts
 //===ACMD===
         //{__Comment__}
         this._map[ "{__DialogName__.p}Dlg" ] = new AssetVo("fairyUI", ["Fui{__DialogName__.p}Dlg.fui","Fui{__DialogName__.p}Dlg@atlas0.png"],'Fui{__DialogName__.p}Dlg' );
+
 //===ACMD===
 //===ACMD===
 Open
