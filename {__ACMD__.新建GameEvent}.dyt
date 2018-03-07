@@ -6,5 +6,6 @@ src/public/event/GameEvent.ts
 //===ACMD===
     //{__Comment__}
     public static {__EventName__.u}:string="{__EventName__.u}";
+
 //===ACMD===
 //===ACMD===
