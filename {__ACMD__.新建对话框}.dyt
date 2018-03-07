@@ -1,0 +1,90 @@
+Add
+//===ACMD===
+src/dialog/{__DialogFolderName__.c}/{__DialogName__.p}Dlg.ts
+//===ACMD===
+import { Game } from '../../public/Game';
+import { {__DialogName__.p}DlgMediator } from './{__DialogName__.p}DlgMediator';
+ 
+/**
+ * {__Comment__}视图
+ * @Author : {__author__} ({__email__})
+ * @Date   : {__date__}
+ */
+export class {__DialogName__.p}Dlg{
+    constructor(){
+        Fui{__DialogName__.p}Dlg.Fui{__DialogName__.p}DlgBinder.bindAll();
+        this.configMediator();        
+    }
+
+    protected configMediator(){
+        Game.mediatorConig.push(new {__DialogName__.p}DlgMediator(), Fui{__DialogName__.p}Dlg.{__DialogName__.p}DlgUI.createInstance());
+    }
+}
+
+export {{__DialogName__.p}Dlg as indexDialog};
+//===ACMD===
+Add
+//===ACMD==
+src/dialog/{__DialogFolderName__.c}/{__DialogName__.p}DlgMediator.ts
+//===ACMD===
+import { Mediator, MHandler, MEvent } from '../../public/lib/RbLeg';
+import { GameEvent } from '../../public/event/GameEvent';
+import { Game } from '../../public/Game';
+
+/**
+ * {__Comment__}视图中介
+ * @Author : {__author__} ({__email__})
+ * @Date   : {__date__}
+ */
+export class {__DialogName__.p}Mediator extends Mediator{
+
+    private _view:Fui{__DialogName__.p}Dlg.{__DialogName__.p}DlgUI;
+
+    public initView(){
+        this._view = this._v as Fui{__DialogName__.p}Dlg.{__DialogName__.p}DlgUI;
+        this.initEvent();
+    }
+
+    protected initEvent(){
+        this.addlisten(GameEvent.SHOW_{__DialogName__.u}_DLG, MHandler.create(this, this.handleShow));
+    }
+
+    protected handleShow($e:MEvent){
+    }
+
+    protected handleHide(){
+    }
+}
+//===ACMD===
+Insert
+//===ACMD===
+src/public/event/GameEvent.ts
+//===ACMD===
+    //ACMD insert
+//===ACMD===
+    //{__Comment__}
+    public static SHOW_{__DialogName__.u}_DLG:string="SHOW_{__DialogName__.u}_DLG";
+//===ACMD===
+//===ACMD===
+Insert
+//===ACMD===
+src/public/config/DialogConfig.ts
+//===ACMD===
+        //ACMD insert
+//===ACMD===
+        this._map[ GameEvent.SHOW_{__DialogName__.u}_DLG ] = new DialogVo( "dialog/{__DialogFolderName__.c}/{__DialogName__.p}Dlg", ["{__DialogName__.p}Dlg"]);
+//===ACMD===
+//===ACMD===
+Insert
+//===ACMD===
+src/public/config/AssetConfig.ts
+//===ACMD===
+        //ACMD insert
+//===ACMD===
+        //{__Comment__}
+        this._map[ "{__DialogName__.p}Dlg" ] = new AssetVo("fairyUI", ["Fui{__DialogName__.p}Dlg.fui","Fui{__DialogName__.p}Dlg@atlas0.png"],'Fui{__DialogName__.p}Dlg' );
+//===ACMD===
+//===ACMD===
+Open
+//===ACMD===
+src/dialog/{__DialogFolderName__.c}/{__DialogName__.p}DlgMediator.ts
