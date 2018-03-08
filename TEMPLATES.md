@@ -10,7 +10,7 @@
 调用结果:
 
 |   操作   |*使用`{EventName}`以大写常量格式定义事件并以`{Comment}`内容注释*|
-|:---------:|:--------|:----|
+|:---------:|:--------|
 |文件|`src/public/event/GameEvent.ts`|
 |位置标记|`//ACMD insert1`|
 
@@ -24,7 +24,7 @@
 调用结果:
 
 |   操作   |*添加`CMD_{CommandName}.ts`文件*|
-|:--------:|:--------|:----|
+|:--------:|:--------|
 |文件夹|`src/public/commands`|
 |**操作**|***导入类`CMD_{CommandName}`***|
 |文件|`src/public/config/GCommandConfig.ts`|
@@ -49,7 +49,7 @@
 调用结果:
 
 |   操作   |*添加`{DialogName}Dlg.ts`文件*|
-|:--------:|:--------|:----|
+|:--------:|:--------|
 |文件夹|`src/dialog/{DialogFolderName}`|
 |**操作**|***添加`{DialogName}DlgMediator.ts`文件***|
 |文件夹|`src/dialog/{DialogFolderName}`|
